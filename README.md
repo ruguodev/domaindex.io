@@ -9,13 +9,12 @@
   [![TLDs](https://img.shields.io/badge/TLDs-100%2B-brightgreen)](https://domaindex.io/tlds)
   [![No Signup](https://img.shields.io/badge/No%20Signup-Required-success)](https://domaindex.io)
 
-  [English](./GitHub-README.md) · [中文](./GitHub-README.zh.md)
+  [English](./README.md) · [中文](./README.zh.md)
 </div>
 
 <br />
 
 <div align="center">
-  <!-- Replace with your own screenshot -->
   <img src="./screenshot.png" alt="domaindex bulk domain availability checker" width="800" />
 </div>
 
