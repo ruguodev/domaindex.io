@@ -1,71 +1,106 @@
-# domaindex.io — Bulk Domain Availability Checker
+<div align="center">
+  <img src="./logo.png" alt="domaindex" height="64" />
 
-**[domaindex.io](https://domaindex.io)** — type a keyword, instantly check its availability across hundreds of TLDs in parallel. Powered by RDAP. No account. No tracking.
+  <h1>domaindex — Bulk Domain Availability Checker</h1>
 
----
+  <p>Type a keyword. Check availability across 100+ TLDs in real time — powered by RDAP, no signup required.</p>
 
-## What It Does
+  [![Live](https://img.shields.io/badge/Live-domaindex.io-0A7CFF)](https://domaindex.io)
+  [![TLDs](https://img.shields.io/badge/TLDs-100%2B-brightgreen)](https://domaindex.io/tlds)
+  [![No Signup](https://img.shields.io/badge/No%20Signup-Required-success)](https://domaindex.io)
 
-Enter any keyword (letters, digits, hyphens). domaindex fires up to **30 parallel RDAP queries** across your selected TLD list and streams results back as they resolve — you see available domains appear in real time, not after the slowest registry responds.
+  [English](./GitHub-README.md) · [中文](./GitHub-README.zh.md)
+</div>
+
+<br />
+
+<div align="center">
+  <!-- Replace with your own screenshot -->
+  <img src="./screenshot.png" alt="domaindex bulk domain availability checker" width="800" />
+</div>
+
+<br />
+
+## What is domaindex?
+
+**[domaindex.io](https://domaindex.io)** is a free bulk domain availability checker. Enter any keyword — a brand name, project slug, or personal handle — and instantly see which extensions are available across **100+ TLDs simultaneously**.
+
+Unlike WHOIS tools that check one domain at a time, domaindex fires up to **30 parallel RDAP queries** and streams results back as each registry responds. You see available domains appear in real time, without waiting for the slowest registry to finish.
 
 ```
-keyword: claude
+Keyword: acme
 
-claude.com   → taken    (registered 1998-09-15)
-claude.io    → available ✓
-claude.ai    → taken    (registered 2021-03-10)
-claude.dev   → available ✓
-claude.app   → taken
+acme.com    → taken     (registered 1995-04-28)
+acme.io     → available ✓
+acme.ai     → taken
+acme.app    → available ✓
+acme.dev    → available ✓
+acme.co     → taken
 ...
 ```
 
-## Features
+## ✨ Features
 
-### Parallel RDAP Queries
-Up to 30 RDAP requests run concurrently. Results appear as they land — gTLDs and ccTLDs resolve at their own pace, you are never waiting on the slowest registry.
+**⚡ Parallel search across 100+ TLDs**
+Check `.com`, `.net`, `.org`, `.io`, `.ai`, `.app`, `.dev`, `.co`, `.me` and 100+ more in a single search — all at once, not one by one.
 
-### Broad TLD Coverage
-Check availability across **gTLDs** (`.com`, `.net`, `.org`, `.io`, `.ai`, `.app`, `.dev`…), **ccTLDs** (`.co`, `.me`, `.so`…), and **IDN suffixes**. The TLD list is sourced from the IANA RDAP bootstrap registry.
+**📡 Real-time results via RDAP**
+Results stream in as each registry responds. No waiting for the full list to load — fast registries appear in seconds.
 
-### Shareable Queries
-Your keyword and selected TLDs are encoded in the URL. Paste the link anywhere — the recipient lands directly on the same search, no setup needed.
+**🔗 Shareable search URLs**
+Your keyword and TLD selection are encoded in the URL. Share the link and teammates land on the exact same search instantly.
 
-### Custom TLD Selection
-Build your own suffix set from the full TLD list. Your selection is saved locally in the browser — no account required.
+**🎛️ Custom TLD sets**
+Pick only the extensions you care about. Preferences save in your browser automatically — no account needed.
 
-### One-Click Registrar Handoff
-Available domains link directly to **Namecheap**, **Porkbun**, and **GoDaddy**. No copy-paste detour between tools.
+**🛒 One-click registrar links**
+Available domains show direct purchase links to Namecheap, Porkbun, and GoDaddy. No copy-pasting.
 
-### Domain Detail Panel
-Click any result to see registrar, registration date, expiration date, and direct purchase links — all pulled from live RDAP data.
+**📋 Domain detail panel**
+Click any result to see registration date, expiry date, registrar, and nameservers — pulled from live RDAP data.
 
-### No Account Required
-Zero sign-up. Zero telemetry. Zero dark patterns. Every query is stateless and runs directly against public RDAP endpoints.
+**🔒 Zero friction**
+No signup. No email. No tracking. Just type a keyword and go.
 
-## Use Cases
+## 🎯 Who Is It For?
 
-- **Founders** searching for a brand name across `.com`, `.io`, `.ai` simultaneously
-- **Developers** checking if a project name is available before committing to it
-- **Domain investors** scanning a keyword across dozens of TLDs at once
-- **Agencies** doing quick availability checks during naming sprints
+| Who | Why they use domaindex |
+|---|---|
+| **Founders & entrepreneurs** | Find a `.com`, `.io`, or `.ai` for a startup before competitors do |
+| **Indie developers** | Check if a project name is free across every major extension at once |
+| **Domain investors** | Scan a keyword across dozens of TLDs in seconds |
+| **Agencies** | Run live availability checks during naming sprints |
+| **Anyone checking domains one by one** | There's a faster way |
 
-## How It Works
+## ❓ FAQ
 
-1. Enter a keyword and select your TLDs
-2. The browser fires parallel requests to the domaindex API
-3. Each query is proxied server-side to the correct RDAP endpoint (looked up from the IANA bootstrap registry — clients never supply URLs directly)
-4. Results stream back and render as they resolve
+**What is a bulk domain availability checker?**
+A bulk domain availability checker searches whether multiple domain names are registered or free — simultaneously. Instead of checking `mybrand.com`, then `mybrand.io`, then `mybrand.ai` one by one, domaindex queries all of them in parallel and shows results as they arrive.
 
-RDAP (Registration Data Access Protocol) is the modern, structured replacement for WHOIS — machine-readable JSON, no scraping, no rate-limit guessing.
+**What is RDAP, and how is it different from WHOIS?**
+RDAP (Registration Data Access Protocol) is the modern successor to WHOIS. It returns structured JSON rather than plain text, making lookups faster, more reliable, and less prone to rate-limiting issues. domaindex uses RDAP for all availability queries — no scraping, no guessing.
 
-## Privacy
+**How many TLDs does domaindex support?**
+domaindex supports **100+ TLDs**, including popular gTLDs (`.com`, `.net`, `.org`, `.io`, `.ai`, `.app`, `.dev`), ccTLDs (`.co`, `.me`, `.so`, `.uk`), and new generic TLDs. Browse the full supported list at [domaindex.io/tlds](https://domaindex.io/tlds).
 
-- No user accounts, no cookies, no analytics
-- Queries are not logged or stored
-- TLD preferences are saved in `localStorage` only — never sent to any server
+**Is domaindex free to use?**
+Yes. The domain availability checker is completely free with no signup required. Advanced features (saved projects, API access, and more) are available on paid plans — see [domaindex.io/pricing](https://domaindex.io/pricing).
+
+**How accurate is the availability data?**
+domaindex queries each TLD's authoritative RDAP registry directly, so data is as fresh and accurate as the registry allows. Some ccTLDs do not publish RDAP endpoints and may not return results.
+
+**Can I share a search with my team?**
+Yes — your keyword and TLD selection are always in the URL. Copy it and paste it anywhere. The recipient lands on the identical search with no account or app required.
+
+## 🔗 Links
+
+- 🌍 **Try it free**: [domaindex.io](https://domaindex.io)
+- 📖 **Browse TLDs**: [domaindex.io/tlds](https://domaindex.io/tlds)
+- 💰 **Pricing**: [domaindex.io/pricing](https://domaindex.io/pricing)
+- 🗺️ **Roadmap**: [domaindex.io/roadmap](https://domaindex.io/roadmap)
+- 📝 **Blog**: [domaindex.io/blog](https://domaindex.io/blog)
+- 🐦 **Twitter / X**: [@ruguodev](https://x.com/ruguodev)
 
 ---
 
-> domaindex.io is a hosted web service. The source code is not publicly available.
-
-**Try it:** [domaindex.io](https://domaindex.io)
+© 2025 domaindex · All Rights Reserved · [domaindex.io](https://domaindex.io)
