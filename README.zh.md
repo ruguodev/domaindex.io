@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/logo.png" alt="domaindex" height="64" />
+  <img src="./logo.png" alt="domaindex" height="64" />
 
   <h1>domaindex — 批量域名可用性查询工具</h1>
 
